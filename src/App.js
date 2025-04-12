@@ -43,12 +43,21 @@ function App() {
   //   phone: '01283503834'
   // }];
 
+  const deleteHandular = (e, clickidx)=>{
+    // const deleteOberation = state.filter((e,idx)=> idx !== clickidx);
+    // setState(deleteOberation)
+    // console.log(deleteOberation)
+
+    setState((prev)=>{
+      return prev.filter((e,idx)=> idx !== clickidx);
+    })
+  }
  
   return (
     <>
       <div className='container1'>
         <h1>Boys Data</h1>
-        <Card nameList = {state} color="#5959f5"/>
+        <Card nameList = {state} color="#5959f5" deleteFunc={deleteHandular}/>
         {/* <h1>Girls Data</h1>
         <Card nameList = {girls} color="#fd5f5f"/> */}
       </div>
