@@ -3,6 +3,7 @@ import './App.css';
 import Card from './components/card/Card';
 
 function App() {
+  const[cardToggel, setCardToggel] = useState(false);
   const [state, setState]= useState([
     {
     name:'Mathew',
@@ -52,12 +53,23 @@ function App() {
       return prev.filter((e,idx)=> idx !== clickidx);
     })
   }
+
+  // const toggelHandular = ()=>{
+  //   console.log("Clicked");
+  //   setCardToggel(!cardToggel);
+  // }
  
   return (
     <>
       <div className='container1'>
         <h1>Boys Data</h1>
-        <Card nameList = {state} color="#5959f5" deleteFunc={deleteHandular}/>
+        <button style={{marginBottom:"20px"}} onClick={()=> setCardToggel(!cardToggel)}>
+          {cardToggel ? "Hide Names" : "Show Names"}
+        </button>
+        <div className={cardToggel ? "show" : "hide"}>
+          <Card nameList = {state} color="#5959f5" deleteFunc={deleteHandular}/>
+        </div>
+        
         {/* <h1>Girls Data</h1>
         <Card nameList = {girls} color="#fd5f5f"/> */}
       </div>
