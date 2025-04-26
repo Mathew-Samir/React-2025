@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import Card from './components/card/Card';
+import LC from './components/card/LC';
 
 function App() {
-  const[cardToggel, setCardToggel] = useState(false);
+  const[cardToggel, setCardToggel] = useState(true);
   const [state, setState]= useState([
     {
     name:'Mathew',
@@ -73,6 +74,8 @@ function App() {
         {/* <h1>Girls Data</h1>
         <Card nameList = {girls} color="#fd5f5f"/> */}
       </div>
+      <hr/>
+      <LC/>
     </>
     
   );
