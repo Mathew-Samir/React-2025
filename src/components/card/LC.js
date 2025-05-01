@@ -19,7 +19,14 @@ const LC = () => {
     useEffect(() => {
       //ADD UR CODE
       if(name  || phone){
-        console.log("use effect one time");
+        const timeOut = setTimeout(()=>{
+            console.log("use effect one time");
+        }, 2000);
+
+        return(()=>{
+            clearTimeout(timeOut);
+        })
+        
       }
       
     }, [name, phone]); //useeffect dependency array
