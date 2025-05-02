@@ -64,15 +64,15 @@ function App() {
   return (
     <>
       <div className='container1'>
-        <UeAPI/>
-        {/* <hr/>
+        {/* <UeAPI/> */}
+        <hr/>
         <h1>Boys Data</h1>
         <button style={{marginBottom:"20px"}} onClick={()=> setCardToggel(!cardToggel)}>
           {cardToggel ? "Hide Names" : "Show Names"}
         </button>
         <div className={cardToggel ? "show" : "hide"}>
           <Card nameList = {state} color="#5959f5" deleteFunc={deleteHandular}/>
-        </div>  */}
+        </div> 
         
         {/* <h1>Girls Data</h1>
         <Card nameList = {girls} color="#fd5f5f"/> */}
